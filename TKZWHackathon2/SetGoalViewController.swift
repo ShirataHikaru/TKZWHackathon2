@@ -30,7 +30,6 @@ class SetGoalViewController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

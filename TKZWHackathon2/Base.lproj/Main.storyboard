@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="259" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="509862745.39676797">
-                                    <!--2017-02-27 04:32:25 +0000-->
+                                    <!--2017-02-27 4午前4:32:25 +0000-->
                                 </date>
                             </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="piP-4w-Bu5">
@@ -54,9 +54,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="-867"/>
+            <point key="canvasLocation" x="210" y="-872"/>
         </scene>
-        <!--Item 2-->
+        <!--統計-->
         <scene sceneID="feA-pu-23S">
             <objects>
                 <viewController id="N8n-XR-bTa" customClass="ChartViewController" customModule="TKZWHackathon2" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,14 +76,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="eIf-Rq-bQw"/>
+                    <tabBarItem key="tabBarItem" title="統計" id="eIf-Rq-bQw"/>
                     <connections>
                         <outlet property="myChartView" destination="dai-7h-wTg" id="Vt4-HM-6a5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFV-zV-bO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-823.20000000000005" y="655.32233883058473"/>
+            <point key="canvasLocation" x="-823" y="1169"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="m8i-Sd-zj5">
@@ -96,17 +96,18 @@
                     </tabBar>
                     <connections>
                         <segue destination="ozw-SV-vQm" kind="relationship" relationship="viewControllers" id="8fn-kA-CG8"/>
+                        <segue destination="GfS-3y-BKk" kind="relationship" relationship="viewControllers" id="nsc-ft-0oE"/>
                         <segue destination="N8n-XR-bTa" kind="relationship" relationship="viewControllers" id="X8z-Ae-eYU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0XP-xT-NOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1846" y="286"/>
+            <point key="canvasLocation" x="-1881" y="286"/>
         </scene>
-        <!--Item-->
+        <!--目標設定-->
         <scene sceneID="pkG-N0-TW1">
             <objects>
-                <viewController id="ozw-SV-vQm" customClass="setMotivationViewController" customModule="TKZWHackathon2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ozw-SV-vQm" customClass="setMorningViewController" customModule="TKZWHackathon2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k5t-DU-M9f"/>
                         <viewControllerLayoutGuide type="bottom" id="1iZ-CW-9md"/>
@@ -115,13 +116,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="進捗目標は？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-6u-xP3">
-                                <rect key="frame" x="36" y="102" width="315" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-JC-GIj">
                                 <rect key="frame" x="166" y="323" width="11" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -133,23 +127,34 @@
                                 <rect key="frame" x="156" y="434" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ok"/>
+                                <connections>
+                                    <action selector="tappedOKButton:" destination="ozw-SV-vQm" eventType="touchUpInside" id="ZdB-Kc-o7A"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="進捗目標は？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-6u-xP3">
+                                <rect key="frame" x="30" y="101" width="315" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="nU9-cN-5Jz"/>
+                    <tabBarItem key="tabBarItem" title="目標設定" id="nU9-cN-5Jz"/>
                     <connections>
+                        <outlet property="countLabel" destination="bPn-JC-GIj" id="Gzw-HQ-kRv"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSetGoal" id="vGM-0h-Inp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2F-hg-DRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-822" y="-96"/>
+            <point key="canvasLocation" x="-823" y="-543"/>
         </scene>
-        <!--View Controller-->
+        <!--目標振り返り-->
         <scene sceneID="WjT-VR-N9T">
             <objects>
-                <viewController id="GfS-3y-BKk" sceneMemberID="viewController">
+                <viewController id="GfS-3y-BKk" customClass="setEveningViewController" customModule="TKZWHackathon2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OQW-KK-NLr"/>
                         <viewControllerLayoutGuide type="bottom" id="mCj-sF-sMq"/>
@@ -169,14 +174,21 @@
                                 <rect key="frame" x="38" y="558" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ok"/>
+                                <connections>
+                                    <action selector="tappedOKButton:" destination="GfS-3y-BKk" eventType="touchUpInside" id="QUE-uC-oZi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="目標振り返り" id="IM4-97-yZX"/>
+                    <connections>
+                        <outlet property="countLabel" destination="EJB-Bz-xde" id="sy4-jT-ONq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUO-z4-PRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="-72"/>
+            <point key="canvasLocation" x="-823" y="286"/>
         </scene>
     </scenes>
 </document>
