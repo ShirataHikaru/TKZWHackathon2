@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC265B101E63E83400EECE88 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC265B0F1E63E83400EECE88 /* SetGoalViewController.swift */; };
+		AC265B141E63E90700EECE88 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC265B131E63E90700EECE88 /* MainTabBarController.swift */; };
+		AC265B161E63EB4A00EECE88 /* setMotivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC265B151E63EB4A00EECE88 /* setMotivationViewController.swift */; };
 		C4427CD91E63DFD1008E8D4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4427CD81E63DFD1008E8D4B /* AppDelegate.swift */; };
 		C4427CDB1E63DFD1008E8D4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4427CDA1E63DFD1008E8D4B /* ViewController.swift */; };
 		C4427CDE1E63DFD1008E8D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4427CDC1E63DFD1008E8D4B /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC265B0F1E63E83400EECE88 /* SetGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
+		AC265B131E63E90700EECE88 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		AC265B151E63EB4A00EECE88 /* setMotivationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setMotivationViewController.swift; sourceTree = "<group>"; };
 		C4427CD51E63DFD1008E8D4B /* TKZWHackathon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKZWHackathon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4427CD81E63DFD1008E8D4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4427CDA1E63DFD1008E8D4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,9 +63,12 @@
 				C4427CD81E63DFD1008E8D4B /* AppDelegate.swift */,
 				C4427CDA1E63DFD1008E8D4B /* ViewController.swift */,
 				C4427CDC1E63DFD1008E8D4B /* Main.storyboard */,
+				AC265B0F1E63E83400EECE88 /* SetGoalViewController.swift */,
 				C4427CDF1E63DFD1008E8D4B /* Assets.xcassets */,
 				C4427CE11E63DFD1008E8D4B /* LaunchScreen.storyboard */,
 				C4427CE41E63DFD1008E8D4B /* Info.plist */,
+				AC265B131E63E90700EECE88 /* MainTabBarController.swift */,
+				AC265B151E63EB4A00EECE88 /* setMotivationViewController.swift */,
 			);
 			path = TKZWHackathon2;
 			sourceTree = "<group>";
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC265B161E63EB4A00EECE88 /* setMotivationViewController.swift in Sources */,
 				C4427CDB1E63DFD1008E8D4B /* ViewController.swift in Sources */,
+				AC265B101E63E83400EECE88 /* SetGoalViewController.swift in Sources */,
+				AC265B141E63E90700EECE88 /* MainTabBarController.swift in Sources */,
 				C4427CD91E63DFD1008E8D4B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +312,7 @@
 				C4427CE91E63DFD1008E8D4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
