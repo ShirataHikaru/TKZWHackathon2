@@ -13,6 +13,7 @@ class Goal: Object {
     dynamic var name = String()
     dynamic var limit = Date()
     dynamic var timeStamp = Date()
+    dynamic var done = Bool()
     let daily = List<Daily>()
     
 }

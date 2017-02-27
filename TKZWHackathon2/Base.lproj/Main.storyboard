@@ -132,7 +132,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="進捗目標は？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-6u-xP3">
-                                <rect key="frame" x="30" y="101" width="315" height="21"/>
+                                <rect key="frame" x="30" y="83" width="315" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -144,6 +144,8 @@
                     <tabBarItem key="tabBarItem" title="目標設定" id="nU9-cN-5Jz"/>
                     <connections>
                         <outlet property="countLabel" destination="bPn-JC-GIj" id="Gzw-HQ-kRv"/>
+                        <outlet property="okButton" destination="qAm-3A-RDN" id="py1-ea-FfE"/>
+                        <outlet property="titleLabel" destination="Vbe-6u-xP3" id="ZCk-NE-6rt"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSetGoal" id="vGM-0h-Inp"/>
                     </connections>
                 </viewController>
@@ -184,6 +186,7 @@
                     <tabBarItem key="tabBarItem" title="目標振り返り" id="IM4-97-yZX"/>
                     <connections>
                         <outlet property="countLabel" destination="EJB-Bz-xde" id="sy4-jT-ONq"/>
+                        <outlet property="okButton" destination="nPB-hr-x4l" id="70B-Bp-bgc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUO-z4-PRg" userLabel="First Responder" sceneMemberID="firstResponder"/>

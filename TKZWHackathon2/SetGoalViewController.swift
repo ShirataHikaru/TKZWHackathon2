@@ -16,15 +16,22 @@ class SetGoalViewController: UIViewController {
     @IBOutlet weak var myTextField: UITextField!
     @IBOutlet weak var myDatePicker: UIDatePicker!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func TappedSubmitButton(_ sender: UIButton) {
         let goal = Goal()
         if myTextField.text != "" {
             goal.name = myTextField.text!
             goal.limit = myDatePicker.date
+            goal.done = false
             goal.timeStamp = Date()
             try! realm.write() {
                 realm.add(goal)
+                self.dismiss(animated: true, completion: nil)
             }
+            
         }else{
         
         }

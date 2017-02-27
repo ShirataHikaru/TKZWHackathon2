@@ -13,6 +13,7 @@ import RealmSwift
 class setEveningViewController: UIViewController {
     
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var okButton: UIButton!
     
     let realm = try! Realm()
     var counter:Int = 0
@@ -21,7 +22,7 @@ class setEveningViewController: UIViewController {
     @IBAction func tappedOKButton(_ sender: UIButton) {
         // データを保存して、目標設定完了という画面に
         
-        let daily = realm.objects(Daily.self).first
+        let daily = realm.objects(Daily.self).filter("").first
         daily?.evening = counter
         let goal = realm.objects(Goal.self).first
         goal?.daily.append(daily!)
