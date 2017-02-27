@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54F39D03433E9EA8B9511216 /* Pods_TKZWHackathon2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5497F75E28ABADA46CE6CD /* Pods_TKZWHackathon2.framework */; };
 		AC265B101E63E83400EECE88 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC265B0F1E63E83400EECE88 /* SetGoalViewController.swift */; };
 		AC265B141E63E90700EECE88 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC265B131E63E90700EECE88 /* MainTabBarController.swift */; };
 		AC265B161E63EB4A00EECE88 /* setMotivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC265B151E63EB4A00EECE88 /* setMotivationViewController.swift */; };
+		C40887301E63F9420081B273 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C408872F1E63F9420081B273 /* Charts.framework */; };
+		C40C8E921E63F737005EBD62 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C8E911E63F737005EBD62 /* ChartViewController.swift */; };
 		C4427CD91E63DFD1008E8D4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4427CD81E63DFD1008E8D4B /* AppDelegate.swift */; };
 		C4427CDB1E63DFD1008E8D4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4427CDA1E63DFD1008E8D4B /* ViewController.swift */; };
 		C4427CDE1E63DFD1008E8D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4427CDC1E63DFD1008E8D4B /* Main.storyboard */; };
@@ -18,9 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		558EA60C425A15ACA7503290 /* Pods-TKZWHackathon2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKZWHackathon2.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKZWHackathon2/Pods-TKZWHackathon2.release.xcconfig"; sourceTree = "<group>"; };
+		9A14E59C8443CEAAE0ABC243 /* Pods-TKZWHackathon2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKZWHackathon2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKZWHackathon2/Pods-TKZWHackathon2.debug.xcconfig"; sourceTree = "<group>"; };
 		AC265B0F1E63E83400EECE88 /* SetGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
 		AC265B131E63E90700EECE88 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		AC265B151E63EB4A00EECE88 /* setMotivationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setMotivationViewController.swift; sourceTree = "<group>"; };
+		C408872F1E63F9420081B273 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
+		C40C8E911E63F737005EBD62 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		C4427CD51E63DFD1008E8D4B /* TKZWHackathon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKZWHackathon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4427CD81E63DFD1008E8D4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4427CDA1E63DFD1008E8D4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +35,7 @@
 		C4427CDF1E63DFD1008E8D4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4427CE21E63DFD1008E8D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4427CE41E63DFD1008E8D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC5497F75E28ABADA46CE6CD /* Pods_TKZWHackathon2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKZWHackathon2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +43,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40887301E63F9420081B273 /* Charts.framework in Frameworks */,
+				54F39D03433E9EA8B9511216 /* Pods_TKZWHackathon2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DE713E0BC56277648155250 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C408872F1E63F9420081B273 /* Charts.framework */,
+				CC5497F75E28ABADA46CE6CD /* Pods_TKZWHackathon2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AED28E7FC844EA3F29B83AE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A14E59C8443CEAAE0ABC243 /* Pods-TKZWHackathon2.debug.xcconfig */,
+				558EA60C425A15ACA7503290 /* Pods-TKZWHackathon2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C4427CCC1E63DFD1008E8D4B = {
 			isa = PBXGroup;
 			children = (
 				C4427CD71E63DFD1008E8D4B /* TKZWHackathon2 */,
 				C4427CD61E63DFD1008E8D4B /* Products */,
+				AED28E7FC844EA3F29B83AE0 /* Pods */,
+				1DE713E0BC56277648155250 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,13 +92,14 @@
 			children = (
 				C4427CD81E63DFD1008E8D4B /* AppDelegate.swift */,
 				C4427CDA1E63DFD1008E8D4B /* ViewController.swift */,
-				C4427CDC1E63DFD1008E8D4B /* Main.storyboard */,
+				AC265B131E63E90700EECE88 /* MainTabBarController.swift */,
+				AC265B151E63EB4A00EECE88 /* setMotivationViewController.swift */,
 				AC265B0F1E63E83400EECE88 /* SetGoalViewController.swift */,
+				C4427CDC1E63DFD1008E8D4B /* Main.storyboard */,
+				C40C8E911E63F737005EBD62 /* ChartViewController.swift */,
 				C4427CDF1E63DFD1008E8D4B /* Assets.xcassets */,
 				C4427CE11E63DFD1008E8D4B /* LaunchScreen.storyboard */,
 				C4427CE41E63DFD1008E8D4B /* Info.plist */,
-				AC265B131E63E90700EECE88 /* MainTabBarController.swift */,
-				AC265B151E63EB4A00EECE88 /* setMotivationViewController.swift */,
 			);
 			path = TKZWHackathon2;
 			sourceTree = "<group>";
@@ -80,9 +111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4427CE71E63DFD1008E8D4B /* Build configuration list for PBXNativeTarget "TKZWHackathon2" */;
 			buildPhases = (
+				DBB31FAA7C0B1F893313743D /* [CP] Check Pods Manifest.lock */,
 				C4427CD11E63DFD1008E8D4B /* Sources */,
 				C4427CD21E63DFD1008E8D4B /* Frameworks */,
 				C4427CD31E63DFD1008E8D4B /* Resources */,
+				4DEA49FE8433A6C585F6BB89 /* [CP] Embed Pods Frameworks */,
+				2A83DD4F4188E2211DF7A90A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,6 +175,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A83DD4F4188E2211DF7A90A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKZWHackathon2/Pods-TKZWHackathon2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DEA49FE8433A6C585F6BB89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKZWHackathon2/Pods-TKZWHackathon2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBB31FAA7C0B1F893313743D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4427CD11E63DFD1008E8D4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,6 +233,7 @@
 				AC265B101E63E83400EECE88 /* SetGoalViewController.swift in Sources */,
 				AC265B141E63E90700EECE88 /* MainTabBarController.swift in Sources */,
 				C4427CD91E63DFD1008E8D4B /* AppDelegate.swift in Sources */,
+				C40C8E921E63F737005EBD62 /* ChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +352,14 @@
 		};
 		C4427CE81E63DFD1008E8D4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A14E59C8443CEAAE0ABC243 /* Pods-TKZWHackathon2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CXU6BD8CC4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Charts",
+				);
 				INFOPLIST_FILE = TKZWHackathon2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Shirata.TKZWHackathon2;
@@ -282,9 +370,14 @@
 		};
 		C4427CE91E63DFD1008E8D4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 558EA60C425A15ACA7503290 /* Pods-TKZWHackathon2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CXU6BD8CC4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Charts",
+				);
 				INFOPLIST_FILE = TKZWHackathon2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Shirata.TKZWHackathon2;

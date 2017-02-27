@@ -17,7 +17,7 @@ class setMotivationViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.performSegue(withIdentifier: "toSetGoal", sender: nil)
+//        self.performSegue(withIdentifier: "toSetGoal", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {

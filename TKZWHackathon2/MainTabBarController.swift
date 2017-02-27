@@ -18,9 +18,8 @@ class MainTabBarController: UITabBarController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
- 
-        print("viewwill")
-//        self.performSegue(withIdentifier: "toSetGoal", sender: nil)
+        
+        self.performSegue(withIdentifier: "toSetGoal", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {

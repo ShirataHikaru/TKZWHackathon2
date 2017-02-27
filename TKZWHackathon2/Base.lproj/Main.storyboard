@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="259" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="509862745.39676797">
-                                    <!--2017-02-27 4午前4:32:25 +0000-->
+                                    <!--2017-02-27 04:32:25 +0000-->
                                 </date>
                             </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="piP-4w-Bu5">
@@ -59,7 +59,7 @@
         <!--Item 2-->
         <scene sceneID="feA-pu-23S">
             <objects>
-                <viewController id="N8n-XR-bTa" sceneMemberID="viewController">
+                <viewController id="N8n-XR-bTa" customClass="ChartViewController" customModule="TKZWHackathon2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oku-7e-dTN"/>
                         <viewControllerLayoutGuide type="bottom" id="3ut-a8-hNc"/>
@@ -68,21 +68,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1F-ni-5U6">
-                                <rect key="frame" x="180" y="117" width="13" height="21"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dai-7h-wTg" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="82" width="375" height="536"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="eIf-Rq-bQw"/>
+                    <connections>
+                        <outlet property="myChartView" destination="dai-7h-wTg" id="Vt4-HM-6a5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFV-zV-bO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-823" y="656"/>
+            <point key="canvasLocation" x="-823.20000000000005" y="655.32233883058473"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="m8i-Sd-zj5">
