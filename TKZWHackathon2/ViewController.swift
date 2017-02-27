@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myTextField: UITextField!
+    
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+    
+    @IBAction func TappedSubmitButton(_ sender: UIButton) {
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
