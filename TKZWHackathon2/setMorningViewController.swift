@@ -8,18 +8,27 @@
 
 import UIKit
 import CoreMotion
+import RealmSwift
 
 class setMorningViewController: UIViewController {
 
     @IBOutlet weak var countLabel: UILabel!
     
+    let realm = try! Realm()
     var counter:Int = 0
     let motionManager:CMMotionManager = CMMotionManager()
     
     @IBAction func tappedOKButton(_ sender: UIButton) {
         // データを保存して、目標設定完了という画面に
+    
+        let daily = Daily()
+        daily.morning = counter
+        daily.createdAt = Date()
         
+        let goal = realm.objects(Goal.self).first
+        goal?.daily.append(daily)
     }
+    
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         countMotion()
     }
