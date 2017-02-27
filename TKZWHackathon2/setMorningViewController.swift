@@ -1,5 +1,5 @@
 //
-//  setMotivationViewController.swift
+//  setMorningViewController.swift
 //  TKZWHackathon2
 //
 //  Created by TaikiFnit on 2017/02/27.
@@ -7,9 +7,33 @@
 //
 
 import UIKit
+import CoreMotion
 
-class setMotivationViewController: UIViewController {
+class setMorningViewController: UIViewController {
 
+    @IBOutlet weak var countLabel: UILabel!
+    
+    var counter:Int = 0
+    let motionManager:CMMotionManager = CMMotionManager()
+    
+    @IBAction func tappedOKButton(_ sender: UIButton) {
+        // データを保存して、目標設定完了という画面に
+        
+    }
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        countMotion()
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        countMotion()
+    }
+    
+    func countMotion () {
+        self.counter += 1
+        self.countLabel.text = String(self.counter)
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,7 +41,7 @@ class setMotivationViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        self.performSegue(withIdentifier: "toSetGoal", sender: nil)
+        //        self.performSegue(withIdentifier: "toSetGoal", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {

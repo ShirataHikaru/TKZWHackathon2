@@ -10,7 +10,8 @@
 		54F39D03433E9EA8B9511216 /* Pods_TKZWHackathon2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5497F75E28ABADA46CE6CD /* Pods_TKZWHackathon2.framework */; };
 		AC265B101E63E83400EECE88 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC265B0F1E63E83400EECE88 /* SetGoalViewController.swift */; };
 		AC265B141E63E90700EECE88 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC265B131E63E90700EECE88 /* MainTabBarController.swift */; };
-		AC265B161E63EB4A00EECE88 /* setMotivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC265B151E63EB4A00EECE88 /* setMotivationViewController.swift */; };
+		AC265B901E6411F900EECE88 /* setMorningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC265B8F1E6411F900EECE88 /* setMorningViewController.swift */; };
+		AC265B921E64121A00EECE88 /* setEveningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC265B911E64121A00EECE88 /* setEveningViewController.swift */; };
 		C40887301E63F9420081B273 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C408872F1E63F9420081B273 /* Charts.framework */; };
 		C40C8E921E63F737005EBD62 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C8E911E63F737005EBD62 /* ChartViewController.swift */; };
 		C4427CD91E63DFD1008E8D4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4427CD81E63DFD1008E8D4B /* AppDelegate.swift */; };
@@ -25,7 +26,8 @@
 		9A14E59C8443CEAAE0ABC243 /* Pods-TKZWHackathon2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKZWHackathon2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKZWHackathon2/Pods-TKZWHackathon2.debug.xcconfig"; sourceTree = "<group>"; };
 		AC265B0F1E63E83400EECE88 /* SetGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
 		AC265B131E63E90700EECE88 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		AC265B151E63EB4A00EECE88 /* setMotivationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setMotivationViewController.swift; sourceTree = "<group>"; };
+		AC265B8F1E6411F900EECE88 /* setMorningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setMorningViewController.swift; sourceTree = "<group>"; };
+		AC265B911E64121A00EECE88 /* setEveningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setEveningViewController.swift; sourceTree = "<group>"; };
 		C408872F1E63F9420081B273 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
 		C40C8E911E63F737005EBD62 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		C4427CD51E63DFD1008E8D4B /* TKZWHackathon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKZWHackathon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,10 +95,11 @@
 				C4427CD81E63DFD1008E8D4B /* AppDelegate.swift */,
 				C4427CDA1E63DFD1008E8D4B /* ViewController.swift */,
 				AC265B131E63E90700EECE88 /* MainTabBarController.swift */,
-				AC265B151E63EB4A00EECE88 /* setMotivationViewController.swift */,
+				AC265B8F1E6411F900EECE88 /* setMorningViewController.swift */,
+				AC265B911E64121A00EECE88 /* setEveningViewController.swift */,
 				AC265B0F1E63E83400EECE88 /* SetGoalViewController.swift */,
-				C4427CDC1E63DFD1008E8D4B /* Main.storyboard */,
 				C40C8E911E63F737005EBD62 /* ChartViewController.swift */,
+				C4427CDC1E63DFD1008E8D4B /* Main.storyboard */,
 				C4427CDF1E63DFD1008E8D4B /* Assets.xcassets */,
 				C4427CE11E63DFD1008E8D4B /* LaunchScreen.storyboard */,
 				C4427CE41E63DFD1008E8D4B /* Info.plist */,
@@ -228,9 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC265B161E63EB4A00EECE88 /* setMotivationViewController.swift in Sources */,
+				AC265B921E64121A00EECE88 /* setEveningViewController.swift in Sources */,
 				C4427CDB1E63DFD1008E8D4B /* ViewController.swift in Sources */,
 				AC265B101E63E83400EECE88 /* SetGoalViewController.swift in Sources */,
+				AC265B901E6411F900EECE88 /* setMorningViewController.swift in Sources */,
 				AC265B141E63E90700EECE88 /* MainTabBarController.swift in Sources */,
 				C4427CD91E63DFD1008E8D4B /* AppDelegate.swift in Sources */,
 				C40C8E921E63F737005EBD62 /* ChartViewController.swift in Sources */,

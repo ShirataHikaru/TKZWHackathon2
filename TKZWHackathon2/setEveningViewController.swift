@@ -1,5 +1,5 @@
 //
-//  SetGoalViewController.swift
+//  setEveningViewController.swift
 //  TKZWHackathon2
 //
 //  Created by TaikiFnit on 2017/02/27.
@@ -7,15 +7,31 @@
 //
 
 import UIKit
+import CoreMotion
 
-class SetGoalViewController: UIViewController {
+class setEveningViewController: UIViewController {
 
-    @IBOutlet weak var myTextField: UITextField!
-    @IBOutlet weak var myDatePicker: UIDatePicker!
+    var counter:Int = 0
+    let motionManager:CMMotionManager = CMMotionManager()
     
-    @IBAction func TappedSubmitButton(_ sender: UIButton) {
-        
+    @IBOutlet weak var countLabel: UILabel!
+    
+    @IBAction func tappedOKButton(_ sender: UIButton) {
+        // データを保存して、目標設定完了という画面に
     }
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        countMotion()
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        countMotion()
+    }
+    
+    func countMotion () {
+        self.counter += 1
+        self.countLabel.text = String(self.counter)
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
