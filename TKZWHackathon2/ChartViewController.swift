@@ -10,16 +10,16 @@ import UIKit
 import Charts
 import RealmSwift
 
+
 class ChartViewController: UIViewController {
 
     @IBOutlet weak var myChartView: BarChartView!
-    
     let realm = try! Realm()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dailyReports = realm.objects(Daily)
+        let dailyReports = realm.objects(Daily.self)
         var unitsSold:Array<Any>!
         
         for report in dailyReports {
@@ -72,17 +72,23 @@ class ChartViewController: UIViewController {
 }
 
 public class BarChartFormatter: NSObject, IAxisValueFormatter{
+    let realm = try! Realm()
     // x軸のラベル
-    var months: [String]! = []
+    var HorizontalValues:[String]! = []
     
-    
-    
-    
+    func createHorizon(){
+        let dailyReports = realm.objects(Daily.self)
+        let formatter = DateFormatter()
+        for reports in dailyReports {
+            self.HorizontalValues.append(formatter.string(from: reports.createdAt))
+        }
+    }
     
     
     // デリゲート。TableViewのcellForRowAtで、indexで渡されたセルをレンダリングするのに似てる。
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         // 0 -> Jan, 1 -> Feb...
-        return months[Int(value)]
+        createHorizon()
+        return HorizontalValues[Int(value)]
     }
 }

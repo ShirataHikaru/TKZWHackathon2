@@ -14,5 +14,4 @@ class Goal: Object {
     dynamic var limit = Date()
     dynamic var timeStamp = Date()
     let daily = List<Daily>()
-    
 }
