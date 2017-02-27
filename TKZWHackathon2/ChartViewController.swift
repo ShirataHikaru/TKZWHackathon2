@@ -8,16 +8,25 @@
 
 import UIKit
 import Charts
+import RealmSwift
 
 class ChartViewController: UIViewController {
 
     @IBOutlet weak var myChartView: BarChartView!
     
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
         
-        setChart(y: unitsSold)
+        let dailyReports = realm.objects(Daily)
+        var unitsSold:Array<Any>!
+        
+        for report in dailyReports {
+            unitsSold.append(report.evening - report.morning)
+        }
+        
+        setChart(y: unitsSold as! [Double])
         // Do any additional setup after loading the view.
     }
     
@@ -50,7 +59,8 @@ class ChartViewController: UIViewController {
         let ll = ChartLimitLine(limit: 10.0, label: "Target")
         myChartView.rightAxis.addLimitLine(ll)
         // グラフのタイトル
-        myChartView.chartDescription?.text = "Cool Graph!"
+        myChartView.chartDescription?.text = "あなたの頑張り度"
+        
     }
 
     override func didReceiveMemoryWarning() {

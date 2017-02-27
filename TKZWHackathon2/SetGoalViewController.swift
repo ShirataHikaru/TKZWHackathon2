@@ -7,20 +7,33 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SetGoalViewController: UIViewController {
-
+    
+    let realm = try! Realm()
+    
     @IBOutlet weak var myTextField: UITextField!
     @IBOutlet weak var myDatePicker: UIDatePicker!
     
     @IBAction func TappedSubmitButton(_ sender: UIButton) {
+        let goal = Goal()
+        if myTextField.text != "" {
+            goal.name = myTextField.text!
+            goal.limit = myDatePicker.date
+            goal.timeStamp = Date()
+            try! realm.write() {
+                realm.add(goal)
+            }
+        }else{
         
+        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
