@@ -10,22 +10,23 @@ import UIKit
 import Charts
 import RealmSwift
 
+
 class ChartViewController: UIViewController {
 
     @IBOutlet weak var myChartView: BarChartView!
-    
     let realm = try! Realm()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dailyReports = realm.objects(Daily)
+        let dailyReports = realm.objects(Daily.self)
         var unitsSold:Array<Any>!
         
         for report in dailyReports {
             unitsSold.append(report.evening - report.morning)
         }
         
+//        unitsSold = [10.0,-10.0,20.0,30.0,-15.0,15.0]
         setChart(y: unitsSold as! [Double])
         // Do any additional setup after loading the view.
     }
@@ -49,6 +50,7 @@ class ChartViewController: UIViewController {
         
         // x軸のラベルをボトムに表示
         myChartView.xAxis.labelPosition = .bottom
+        
         // グラフの色
         chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
         // グラフの背景色
@@ -56,7 +58,7 @@ class ChartViewController: UIViewController {
         // グラフの棒をニョキッとアニメーションさせる
         myChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
         // 横に赤いボーダーラインを描く
-        let ll = ChartLimitLine(limit: 10.0, label: "Target")
+        let ll = ChartLimitLine(limit: 0.0, label: "Target")
         myChartView.rightAxis.addLimitLine(ll)
         // グラフのタイトル
         myChartView.chartDescription?.text = "あなたの頑張り度"
@@ -70,12 +72,23 @@ class ChartViewController: UIViewController {
 }
 
 public class BarChartFormatter: NSObject, IAxisValueFormatter{
+    let realm = try! Realm()
     // x軸のラベル
-    var months: [String]! = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    var HorizontalValues:[String]! = []
+    
+    func createHorizon(){
+        let dailyReports = realm.objects(Daily.self)
+        let formatter = DateFormatter()
+        for reports in dailyReports {
+            self.HorizontalValues.append(formatter.string(from: reports.createdAt))
+        }
+    }
+    
     
     // デリゲート。TableViewのcellForRowAtで、indexで渡されたセルをレンダリングするのに似てる。
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         // 0 -> Jan, 1 -> Feb...
-        return months[Int(value)]
+        createHorizon()
+        return HorizontalValues[Int(value)]
     }
 }
