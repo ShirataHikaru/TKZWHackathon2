@@ -43,7 +43,7 @@
 		C4427CDF1E63DFD1008E8D4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4427CE21E63DFD1008E8D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4427CE41E63DFD1008E8D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4B6A7431E65324900C0680F /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Fire.sks; path = /Users/Shirata/Documents/code/Swift/TKZWHackathon2/TKZWHackathon2/Fire.sks; sourceTree = "<absolute>"; };
+		C4B6A7431E65324900C0680F /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
 		C4BFCC2C1E6512CC00A217FE /* LightScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightScene.swift; sourceTree = "<group>"; };
 		CC5497F75E28ABADA46CE6CD /* Pods_TKZWHackathon2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKZWHackathon2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
