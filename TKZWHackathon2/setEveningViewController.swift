@@ -9,11 +9,13 @@
 import UIKit
 import CoreMotion
 import RealmSwift
+import SpriteKit
+
 
 class setEveningViewController: UIViewController {
     
-    @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var okButton: UIButton!
+    @IBOutlet weak var skView: SKView!
     
     let realm = try! Realm()
     var counter:Int = 0
@@ -49,7 +51,10 @@ class setEveningViewController: UIViewController {
     
     func countMotion () {
         self.counter += 1
-        self.countLabel.text = String(self.counter)
+        let ud = UserDefaults.standard
+        ud.set(self.counter, forKey: "counter")
+        self.showParticle()
+        
     }
 
     override func viewDidLoad() {
@@ -74,6 +79,20 @@ class setEveningViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         checkNotDone()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        showParticle()
+    }
+    
+    func showParticle() {
+        let scene = LightScene(size: skView.frame.size)
+        skView.ignoresSiblingOrder = true
+        skView.allowsTransparency = true
+        scene.scaleMode = .aspectFill
+        skView.presentScene(scene)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
