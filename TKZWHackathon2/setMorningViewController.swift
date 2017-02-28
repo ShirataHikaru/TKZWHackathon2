@@ -27,11 +27,13 @@ class setMorningViewController: UIViewController {
         let daily = Daily()
         daily.morning = counter
         daily.createdAt = Date()
+        daily.done = false
 //
         let goal = realm.objects(Goal.self).filter("done == 0").first
         try! realm.write() {
             goal?.daily.append(daily)
         }
+        checkDone()
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -65,7 +67,11 @@ class setMorningViewController: UIViewController {
             self.performSegue(withIdentifier: "toSetGoal", sender: nil)
         }
         
-        let daily = realm.objects(Daily.self).filter("evening == 0").first
+        checkDone()
+    }
+    
+    func checkDone() {
+        let daily = realm.objects(Daily.self).filter("done == 0").first
         
         // eveningがzeroのdailyがある = morningのcounterはset済み
         if let d = daily {

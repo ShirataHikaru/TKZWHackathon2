@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myDatePicker: UIDatePicker!
     
     @IBAction func TappedSubmitButton(_ sender: UIButton) {
-    
+        
     }
     
     override func viewDidLoad() {
@@ -27,7 +27,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

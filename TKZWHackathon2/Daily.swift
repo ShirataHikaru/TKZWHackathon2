@@ -15,5 +15,6 @@ class Daily: Object {
     dynamic var morning = Int()
     dynamic var evening = Int()
     dynamic var createdAt = Date()
+    dynamic var done = Bool()
     dynamic var goal:Goal?
 }

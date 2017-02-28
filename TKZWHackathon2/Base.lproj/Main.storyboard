@@ -21,30 +21,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tTA-wo-hkZ">
-                                <rect key="frame" x="0.0" y="259" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="509862745.39676797">
-                                    <!--2017-02-27 4午前4:32:25 +0000-->
-                                </date>
-                            </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="piP-4w-Bu5">
-                                <rect key="frame" x="16" y="181" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="piP-4w-Bu5">
+                                <rect key="frame" x="10" y="157" width="355" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtw-co-daY">
-                                <rect key="frame" x="135" y="483" width="105" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtw-co-daY">
+                                <rect key="frame" x="141" y="570" width="93" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <state key="normal" title="決定"/>
                                 <connections>
                                     <action selector="TappedSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rF1-7s-bTm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標を設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEV-Ov-mTC">
+                                <rect key="frame" x="108.5" y="70" width="157" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tTA-wo-hkZ">
+                                <rect key="frame" x="0.0" y="207" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="509862745.39676797">
+                                    <!--2017-02-27 4午前4:32:25 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tTA-wo-hkZ" secondAttribute="trailing" id="7NP-H4-ETt"/>
+                            <constraint firstItem="tTA-wo-hkZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BId-s0-XpN"/>
+                            <constraint firstItem="piP-4w-Bu5" firstAttribute="top" secondItem="yEV-Ov-mTC" secondAttribute="bottom" constant="50" id="Ce6-3y-vcQ"/>
+                            <constraint firstItem="tTA-wo-hkZ" firstAttribute="top" secondItem="piP-4w-Bu5" secondAttribute="bottom" constant="20" id="Duh-6K-jnq"/>
+                            <constraint firstAttribute="trailing" secondItem="piP-4w-Bu5" secondAttribute="trailing" constant="10" id="RAg-Xg-hrI"/>
+                            <constraint firstItem="yEV-Ov-mTC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="hXC-vP-G5T"/>
+                            <constraint firstItem="yEV-Ov-mTC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mAA-NX-74I"/>
+                            <constraint firstItem="Mtw-co-daY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mN0-uh-0cc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mtw-co-daY" secondAttribute="bottom" constant="30" id="mqM-PA-ij4"/>
+                            <constraint firstItem="piP-4w-Bu5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="ne8-7w-9NE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="3tX-2G-XhV"/>
                     <connections>
@@ -54,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="302" y="-544"/>
+            <point key="canvasLocation" x="301.60000000000002" y="-545.57721139430294"/>
         </scene>
         <!--統計-->
         <scene sceneID="feA-pu-23S">
@@ -116,30 +133,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-JC-GIj">
-                                <rect key="frame" x="166" y="323" width="11" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-JC-GIj">
+                                <rect key="frame" x="154.5" y="269.5" width="65" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="107"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAm-3A-RDN">
-                                <rect key="frame" x="156" y="434" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ok"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日のモチベ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-6u-xP3">
+                                <rect key="frame" x="37" y="80" width="301.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAm-3A-RDN">
+                                <rect key="frame" x="155.5" y="521" width="63" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <state key="normal" title="OK"/>
                                 <connections>
                                     <action selector="tappedOKButton:" destination="ozw-SV-vQm" eventType="touchUpInside" id="ZdB-Kc-o7A"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="進捗目標は？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-6u-xP3">
-                                <rect key="frame" x="30" y="83" width="315" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vbe-6u-xP3" firstAttribute="top" secondItem="k5t-DU-M9f" secondAttribute="bottom" constant="60" id="G35-xW-qFa"/>
+                            <constraint firstItem="Vbe-6u-xP3" firstAttribute="centerX" secondItem="ex5-mo-btD" secondAttribute="centerX" id="bjN-a9-t5V"/>
+                            <constraint firstItem="1iZ-CW-9md" firstAttribute="top" secondItem="qAm-3A-RDN" secondAttribute="bottom" constant="30" id="eAt-Ah-Aoq"/>
+                            <constraint firstItem="qAm-3A-RDN" firstAttribute="centerX" secondItem="ex5-mo-btD" secondAttribute="centerX" id="i91-cF-6wJ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="目標設定" id="nU9-cN-5Jz"/>
                     <connections>
@@ -151,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2F-hg-DRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-823" y="-543"/>
+            <point key="canvasLocation" x="-823.20000000000005" y="-543.77811094452773"/>
         </scene>
         <!--目標振り返り-->
         <scene sceneID="WjT-VR-N9T">
@@ -165,23 +187,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJB-Bz-xde">
-                                <rect key="frame" x="48" y="447" width="11" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPB-hr-x4l">
-                                <rect key="frame" x="38" y="558" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ok"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPB-hr-x4l">
+                                <rect key="frame" x="156" y="521" width="63" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <state key="normal" title="OK"/>
                                 <connections>
                                     <action selector="tappedOKButton:" destination="GfS-3y-BKk" eventType="touchUpInside" id="QUE-uC-oZi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標達成度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLe-ay-7I2">
+                                <rect key="frame" x="62" y="80" width="251" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJB-Bz-xde">
+                                <rect key="frame" x="155" y="269.5" width="65" height="128"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="107"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mCj-sF-sMq" firstAttribute="top" secondItem="nPB-hr-x4l" secondAttribute="bottom" constant="30" id="3FK-9n-kmB"/>
+                            <constraint firstItem="EJB-Bz-xde" firstAttribute="centerY" secondItem="ftR-6Y-8zM" secondAttribute="centerY" id="8PH-qF-ZSE"/>
+                            <constraint firstItem="EJB-Bz-xde" firstAttribute="centerX" secondItem="ftR-6Y-8zM" secondAttribute="centerX" id="Gcg-Ua-uk9"/>
+                            <constraint firstItem="YLe-ay-7I2" firstAttribute="top" secondItem="OQW-KK-NLr" secondAttribute="bottom" constant="60" id="OPo-q9-L1H"/>
+                            <constraint firstItem="nPB-hr-x4l" firstAttribute="centerX" secondItem="ftR-6Y-8zM" secondAttribute="centerX" id="jdy-RH-HZ3"/>
+                            <constraint firstItem="YLe-ay-7I2" firstAttribute="centerX" secondItem="ftR-6Y-8zM" secondAttribute="centerX" id="s4o-fK-bGm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="目標振り返り" id="IM4-97-yZX"/>
                     <connections>
@@ -191,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUO-z4-PRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-823" y="286"/>
+            <point key="canvasLocation" x="-823.20000000000005" y="285.60719640179911"/>
         </scene>
     </scenes>
 </document>

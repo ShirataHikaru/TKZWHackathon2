@@ -17,16 +17,23 @@ class setEveningViewController: UIViewController {
     
     let realm = try! Realm()
     var counter:Int = 0
+    var isEnableEvening: Bool = true
     let motionManager:CMMotionManager = CMMotionManager()
     
     @IBAction func tappedOKButton(_ sender: UIButton) {
         // データを保存して、目標設定完了という画面に
         
-        let daily = realm.objects(Daily.self).filter("").first
-        daily?.evening = counter
-        let goal = realm.objects(Goal.self).first
-        goal?.daily.append(daily!)
+        // 現在進行中のdaily取得
+        let daily = realm.objects(Daily.self).filter("done == 0").first
+        
+        // Dailyに入力されたEveningをSet
+        try! realm.write() {
+            daily?.evening = counter
+            daily?.done = true
+            checkNotDone()
+        }
     }
+    
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         countMotion()
     }
@@ -40,11 +47,24 @@ class setEveningViewController: UIViewController {
         self.countLabel.text = String(self.counter)
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func checkNotDone() {
+        let daily = realm.objects(Daily.self).filter("done != 0").first
+        
+        // done == 0が存在する = eveningが無効化
+        if let d = daily {
+            self.isEnableEvening = false
+            self.okButton.isEnabled = false
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        checkNotDone()
     }
 
     override func didReceiveMemoryWarning() {
