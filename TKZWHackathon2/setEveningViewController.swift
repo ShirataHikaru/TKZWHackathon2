@@ -30,6 +30,7 @@ class setEveningViewController: UIViewController {
         try! realm.write() {
             daily?.evening = counter
             daily?.done = true
+            counter = 0
             checkNotDone()
         }
     }
@@ -56,10 +57,15 @@ class setEveningViewController: UIViewController {
     }
     
     func checkNotDone() {
-        let daily = realm.objects(Daily.self).filter("done != 0").first
+        let daily = realm.objects(Daily.self).filter("done == 0").first
         
-        // done == 0が存在する = eveningが無効化
+        // done == 0が存在する = 朝はすでに設定されているので夜も設定する
         if let d = daily {
+            self.isEnableEvening = true
+            self.okButton.isEnabled = true
+
+        } else {
+            // done == 0が存在しない = 朝がまだされていないので夜も設定させない
             self.isEnableEvening = false
             self.okButton.isEnabled = false
         }

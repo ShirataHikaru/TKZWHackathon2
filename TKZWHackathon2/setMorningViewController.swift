@@ -28,6 +28,8 @@ class setMorningViewController: UIViewController {
         daily.morning = counter
         daily.createdAt = Date()
         daily.done = false
+        
+        counter = 0
 
         let goal = realm.objects(Goal.self).filter("done == 0").first
         try! realm.write() {
@@ -68,17 +70,6 @@ class setMorningViewController: UIViewController {
         }
         
         checkDone()
-        
-        let dailyReports = realm.objects(Daily.self)
-        
-        let array:Array<Any> = dailyReports.map { (daily) in daily.evening - daily.morning }
-        
-        
-        print (array)
-        
-        //        unitsSold = [10.0,-10.0,20.0,30.0,-15.0,15.0]
-        
-
     }
     
     func checkDone() {
@@ -90,6 +81,10 @@ class setMorningViewController: UIViewController {
             self.okButton.isEnabled = false
             self.countLabel.text = String(d.morning)
             self.titleLabel.text = "設定したやる気"
+        } else {
+            // もとに戻す
+            self.isEnableMoring = true
+            self.okButton.isEnabled = true
         }
     }
 
