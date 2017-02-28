@@ -20,14 +20,11 @@ class ChartViewController: UIViewController {
         super.viewDidLoad()
         
         let dailyReports = realm.objects(Daily.self)
-        var unitsSold:Array<Any>!
+        let unitsSold:Array<Double> = dailyReports.map { (daily) in Double(daily.evening - daily.morning) }
         
-        for report in dailyReports {
-            unitsSold.append(report.evening - report.morning)
-        }
+//       unitsSold = [10.0,-10.0,20.0,30.0,-15.0,15.0]
+        setChart(y: unitsSold)
         
-//        unitsSold = [10.0,-10.0,20.0,30.0,-15.0,15.0]
-        setChart(y: unitsSold as! [Double])
         // Do any additional setup after loading the view.
     }
     

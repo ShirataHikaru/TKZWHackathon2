@@ -28,7 +28,7 @@ class setMorningViewController: UIViewController {
         daily.morning = counter
         daily.createdAt = Date()
         daily.done = false
-//
+
         let goal = realm.objects(Goal.self).filter("done == 0").first
         try! realm.write() {
             goal?.daily.append(daily)
@@ -68,6 +68,17 @@ class setMorningViewController: UIViewController {
         }
         
         checkDone()
+        
+        let dailyReports = realm.objects(Daily.self)
+        
+        let array:Array<Any> = dailyReports.map { (daily) in daily.evening - daily.morning }
+        
+        
+        print (array)
+        
+        //        unitsSold = [10.0,-10.0,20.0,30.0,-15.0,15.0]
+        
+
     }
     
     func checkDone() {

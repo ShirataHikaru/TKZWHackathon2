@@ -31,7 +31,6 @@ class SetGoalViewController: UIViewController {
                 realm.add(goal)
                 self.dismiss(animated: true, completion: nil)
             }
-            
         }else{
         
         }

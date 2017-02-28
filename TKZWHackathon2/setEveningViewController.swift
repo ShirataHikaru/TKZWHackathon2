@@ -35,11 +35,15 @@ class setEveningViewController: UIViewController {
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        countMotion()
+        if (isEnableEvening == true) {
+            countMotion()
+        }
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        countMotion()
+        if (isEnableEvening == true) {
+            countMotion()
+        }
     }
     
     func countMotion () {
@@ -49,8 +53,6 @@ class setEveningViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     func checkNotDone() {
