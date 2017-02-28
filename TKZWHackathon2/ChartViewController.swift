@@ -21,7 +21,7 @@ class ChartViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let dailies = realm.objects(Daily.self)
+        let dailies = realm.objects(Daily.self).filter("done == 1")
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd"
             let day:Array<String> = dailies.map({ (daily) in formatter.string(from: daily.createdAt) })
@@ -78,7 +78,7 @@ public class BarChartFormatter: NSObject, IAxisValueFormatter{
     var HorizontalValues:[String]!
     
     func createHorizon(){
-        let dailyReports = realm.objects(Daily.self)
+        let dailyReports = realm.objects(Daily.self).filter("done == 1")
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd"
         
