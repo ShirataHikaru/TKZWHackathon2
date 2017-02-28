@@ -13,7 +13,6 @@ import SpriteKit
 
 class setMorningViewController: UIViewController {
 
-    @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var skView: SKView!
@@ -55,7 +54,6 @@ class setMorningViewController: UIViewController {
     
     func countMotion () {
         self.counter += 1
-        self.countLabel.text = String(self.counter)
         let ud = UserDefaults.standard
         ud.set(self.counter, forKey: "counter")
         self.showParticle()
@@ -86,12 +84,12 @@ class setMorningViewController: UIViewController {
         if let d = daily {
             self.isEnableMoring = false
             self.okButton.isEnabled = false
-            self.countLabel.text = String(d.morning)
-            self.titleLabel.text = "設定したやる気"
+            self.titleLabel.text = "設定したモチベ"
         } else {
             // もとに戻す
             self.isEnableMoring = true
             self.okButton.isEnabled = true
+            self.titleLabel.text = "今日のモチベ"
         }
     }
     
