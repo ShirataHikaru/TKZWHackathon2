@@ -9,12 +9,15 @@
 import UIKit
 import CoreMotion
 import RealmSwift
+import SpriteKit
 
 class setMorningViewController: UIViewController {
 
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var skView: SKView!
+    
     
     let realm = try! Realm()
     var counter:Int = 0
@@ -51,11 +54,13 @@ class setMorningViewController: UIViewController {
     func countMotion () {
         self.counter += 1
         self.countLabel.text = String(self.counter)
+        let ud = UserDefaults.standard
+        ud.set(self.counter, forKey: "counter")
+        self.showParticle()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -66,7 +71,9 @@ class setMorningViewController: UIViewController {
             // 0じゃないgoalがない = 目標がまだ設定されていない. So, move 目標設定画面
             self.performSegue(withIdentifier: "toSetGoal", sender: nil)
         }
-        
+        let ud = UserDefaults.standard
+        ud.set(0, forKey: "counter")
+
         checkDone()
     }
     
@@ -81,6 +88,20 @@ class setMorningViewController: UIViewController {
             self.titleLabel.text = "設定したやる気"
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        showParticle()
+    }
+    
+    func showParticle() {
+        let scene = LightScene(size: skView.frame.size)
+        skView.ignoresSiblingOrder = true
+        skView.allowsTransparency = true
+        scene.scaleMode = .aspectFill
+        skView.presentScene(scene)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
