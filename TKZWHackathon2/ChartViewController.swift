@@ -58,7 +58,7 @@ class ChartViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
 
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "朝と夜のモチベの差")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "モチベの推移")
         // グラフの色
         //chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
 
