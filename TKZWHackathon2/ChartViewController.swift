@@ -18,48 +18,52 @@ class ChartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let dailyReports = realm.objects(Daily.self)
-        let unitsSold:Array<Double> = dailyReports.map { (daily) in Double(daily.evening - daily.morning) }
-        
-//       unitsSold = [10.0,-10.0,20.0,30.0,-15.0,15.0]
-        setChart(y: unitsSold)
-        
-        // Do any additional setup after loading the view.
     }
     
-    func setChart(y: [Double]) {
-        // プロットデータ(y軸)を保持する配列
-        var dataEntries = [BarChartDataEntry]()
-        
-        for (i, val) in y.enumerated() {
-            let dataEntry = BarChartDataEntry(x: Double(i), y: val) // X軸データは、0,1,2,...
-            dataEntries.append(dataEntry)
+    override func viewDidAppear(_ animated: Bool) {
+        let dailies = realm.objects(Daily.self)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd"
+            let day:Array<String> = dailies.map({ (daily) in formatter.string(from: daily.createdAt) })
+            let dailyReports:Array<Double> = dailies.map { (daily) in Double(daily.evening - daily.morning)
         }
-        // グラフをUIViewにセット
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Units Sold")
-        myChartView.data = BarChartData(dataSet: chartDataSet)
         
+        setChart(x: day, y: dailyReports)
+      
         // X軸のラベルを設定
         let xaxis = XAxis()
         xaxis.valueFormatter = BarChartFormatter()
         myChartView.xAxis.valueFormatter = xaxis.valueFormatter
+        myChartView.xAxis.granularity = 1
         
+        myChartView.chartDescription?.text = "あなたの相対頑張り度"
+        myChartView.animate(yAxisDuration: 2.0)
+        myChartView.pinchZoomEnabled = false
+        myChartView.doubleTapToZoomEnabled = false
+        myChartView.drawBarShadowEnabled = false
         // x軸のラベルをボトムに表示
         myChartView.xAxis.labelPosition = .bottom
-        
-        // グラフの色
-        chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
         // グラフの背景色
-        myChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
-        // グラフの棒をニョキッとアニメーションさせる
-        myChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-        // 横に赤いボーダーラインを描く
-        let ll = ChartLimitLine(limit: 0.0, label: "Target")
-        myChartView.rightAxis.addLimitLine(ll)
-        // グラフのタイトル
-        myChartView.chartDescription?.text = "あなたの頑張り度"
+        // myChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
+    }
+    
+    func setChart(x: [String],y: [Double]) {
         
+        myChartView.noDataText = "データがありません"
+        
+        var dataEntries: [BarChartDataEntry] = []
+        
+        for i in 0..<x.count {
+           let dataEntry = BarChartDataEntry(x: Double(i), y: y[i])
+            dataEntries.append(dataEntry)
+        }
+
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "朝と夜のモチベの差")
+        // グラフの色
+        //chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
+
+        let chartData = BarChartData(dataSet: chartDataSet)
+        myChartView.data = chartData
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,20 +75,19 @@ class ChartViewController: UIViewController {
 public class BarChartFormatter: NSObject, IAxisValueFormatter{
     let realm = try! Realm()
     // x軸のラベル
-    var HorizontalValues:[String]! = []
+    var HorizontalValues:[String]!
     
     func createHorizon(){
         let dailyReports = realm.objects(Daily.self)
         let formatter = DateFormatter()
-        for reports in dailyReports {
-            self.HorizontalValues.append(formatter.string(from: reports.createdAt))
-        }
+        formatter.dateFormat = "MM/dd"
+        
+        HorizontalValues = dailyReports.map({ (daily) in formatter.string(from: daily.createdAt) })
     }
     
     
     // デリゲート。TableViewのcellForRowAtで、indexで渡されたセルをレンダリングするのに似てる。
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        // 0 -> Jan, 1 -> Feb...
         createHorizon()
         return HorizontalValues[Int(value)]
     }
