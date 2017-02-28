@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/Shirata/Documents/code/Swift/TKZWHackathon2/TKZWHackathon2/Fire.sks">
+   </FileRef>
+   <FileRef
       location = "group:TKZWHackathon2.xcodeproj">
    </FileRef>
    <FileRef
