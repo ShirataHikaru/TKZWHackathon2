@@ -9,6 +9,7 @@
 import UIKit
 import CoreMotion
 import RealmSwift
+import AudioToolbox
 
 class setEveningViewController: UIViewController {
     
@@ -37,12 +38,14 @@ class setEveningViewController: UIViewController {
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         if (isEnableEvening == true) {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             countMotion()
         }
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if (isEnableEvening == true) {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             countMotion()
         }
     }

@@ -10,6 +10,7 @@ import UIKit
 import CoreMotion
 import RealmSwift
 import SpriteKit
+import AudioToolbox
 
 class setMorningViewController: UIViewController {
 
@@ -42,12 +43,14 @@ class setMorningViewController: UIViewController {
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         if isEnableMoring == true {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             countMotion()
         }
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if isEnableMoring == true {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             countMotion()
         }
     }
