@@ -18,6 +18,7 @@ class setMorningViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var skView: SKView!
     
+    @IBOutlet weak var mokuhyoLabel: UILabel!
     
     let realm = try! Realm()
     var counter:Int = 0
@@ -76,23 +77,34 @@ class setMorningViewController: UIViewController {
         }
         let ud = UserDefaults.standard
         ud.set(0, forKey: "counter")
-
+        self.okButton.titleLabel?.text = "OK"
+        
+        
         checkDone()
     }
     
     func checkDone() {
         let daily = realm.objects(Daily.self).filter("done == 0").first
-        
+        let goal = realm.objects(Goal.self).filter("done == 0").first
         // eveningがzeroのdailyがある = morningのcounterはset済み
         if let d = daily {
             self.isEnableMoring = false
             self.okButton.isEnabled = false
-            self.titleLabel.text = "設定したモチベ"
+            self.titleLabel.text = "今日の目標"
+            self.okButton.titleLabel?.text = ""
+            if let g = goal {
+                self.mokuhyoLabel.text = "『\(g.name)』"
+            }
         } else {
             // もとに戻す
             self.isEnableMoring = true
             self.okButton.isEnabled = true
-            self.titleLabel.text = "今日のモチベ"
+            self.titleLabel.text = "モチベを上げよう"
+            self.okButton.titleLabel?.text = "OK"
+            if let g = goal {
+                self.mokuhyoLabel.text = "『\(g.name)』"
+            }
+            
         }
     }
     

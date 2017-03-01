@@ -104,12 +104,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TKZWHackathon2/setMorningViewController.swift"
-            timestampString = "509951281.327201"
+            timestampString = "509958858.214978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "countMotion()"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "motionEnded(_:with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

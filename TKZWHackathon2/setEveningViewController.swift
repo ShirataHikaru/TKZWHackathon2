@@ -31,10 +31,45 @@ class setEveningViewController: UIViewController {
         // Dailyに入力されたEveningをSet
         try! realm.write() {
             daily?.evening = counter
+            
             daily?.done = true
             counter = 0
             checkNotDone()
         }
+    }
+    
+    @IBAction func tappedAddButton(_ sender: Any) {
+        let alert: UIAlertController = UIAlertController(title: "アラート表示", message: "新しい目標を立てますか？", preferredStyle:  UIAlertControllerStyle.alert)
+        
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("OK")
+            
+            let goal = self.realm.objects(Goal.self).filter("done == 0").first
+            
+            let daily = self.realm.objects(Daily.self).filter("done == 0").first
+            
+            try! self.realm.write() {
+                if let d = daily{
+                    daily?.done = true
+                }
+                goal?.done = true
+            }
+            self.tabBarController?.selectedIndex = 0
+            self.performSegue(withIdentifier: "toSetGoal", sender: nil)
+        })
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("Cancel")
+        })
+        
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -81,6 +116,9 @@ class setEveningViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         checkNotDone()
     }
+    
+    
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

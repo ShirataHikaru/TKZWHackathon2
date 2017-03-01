@@ -23,10 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38j-en-OC8">
-                                <rect key="frame" x="16" y="74" width="343" height="498"/>
+                                <rect key="frame" x="16" y="74" width="343" height="549"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtw-co-daY">
-                                        <rect key="frame" x="125" y="413" width="93" height="67"/>
+                                        <rect key="frame" x="125" y="455" width="93" height="67"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                         <state key="normal" title="決定">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,7 +38,7 @@
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Mtw-co-daY" secondAttribute="bottom" constant="18" id="3AX-WH-c9I"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mtw-co-daY" secondAttribute="bottom" constant="27" id="3AX-WH-c9I"/>
                                     <constraint firstItem="Mtw-co-daY" firstAttribute="centerX" secondItem="38j-en-OC8" secondAttribute="centerX" id="o5v-Rz-PzD"/>
                                 </constraints>
                             </view>
@@ -71,7 +71,7 @@
                             <constraint firstItem="tTA-wo-hkZ" firstAttribute="top" secondItem="piP-4w-Bu5" secondAttribute="bottom" constant="8" id="Duh-6K-jnq"/>
                             <constraint firstAttribute="trailing" secondItem="piP-4w-Bu5" secondAttribute="trailing" constant="27" id="RAg-Xg-hrI"/>
                             <constraint firstItem="38j-en-OC8" firstAttribute="centerX" secondItem="tTA-wo-hkZ" secondAttribute="centerX" id="VXU-u7-1Lw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="38j-en-OC8" secondAttribute="bottom" constant="95" id="drq-CI-08M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="38j-en-OC8" secondAttribute="bottom" constant="44" id="drq-CI-08M"/>
                             <constraint firstItem="yEV-Ov-mTC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="hXC-vP-G5T"/>
                             <constraint firstItem="38j-en-OC8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="j0X-fu-9QQ"/>
                             <constraint firstItem="yEV-Ov-mTC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mAA-NX-74I"/>
@@ -165,34 +165,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUd-ec-qem" customClass="SKView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="-20.5" width="375" height="638.5"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日のモチベ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-6u-xP3">
-                                <rect key="frame" x="37" y="80" width="302" height="60"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="モチベを上げよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-6u-xP3">
+                                <rect key="frame" x="54.5" y="80" width="266.5" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qAm-3A-RDN">
-                                <rect key="frame" x="154.5" y="544.5" width="66" height="65.5"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="OK">
-                                            <attributes>
-                                                <color key="NSColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" metaFont="system" size="46"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAm-3A-RDN">
+                                <rect key="frame" x="172.5" y="574" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="tappedOKButton:" destination="ozw-SV-vQm" eventType="touchUpInside" id="ZdB-Kc-o7A"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="hoge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdY-7b-yQY">
+                                <rect key="frame" x="16" y="138" width="343" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BdY-7b-yQY" firstAttribute="top" secondItem="Vbe-6u-xP3" secondAttribute="bottom" constant="18" id="0ze-Gl-mBt"/>
                             <constraint firstItem="RUd-ec-qem" firstAttribute="leading" secondItem="ex5-mo-btD" secondAttribute="leading" id="3ic-Qn-alJ"/>
                             <constraint firstItem="RUd-ec-qem" firstAttribute="centerX" secondItem="ex5-mo-btD" secondAttribute="centerX" id="7Mu-3M-q0r"/>
                             <constraint firstItem="RUd-ec-qem" firstAttribute="top" secondItem="Vbe-6u-xP3" secondAttribute="bottom" constant="-140" id="99J-LQ-wPg"/>
@@ -204,10 +204,13 @@
                             <constraint firstItem="RUd-ec-qem" firstAttribute="top" secondItem="Vbe-6u-xP3" secondAttribute="bottom" constant="-140" id="eu7-OC-AfS"/>
                             <constraint firstItem="qAm-3A-RDN" firstAttribute="centerX" secondItem="ex5-mo-btD" secondAttribute="centerX" id="i91-cF-6wJ"/>
                             <constraint firstItem="1iZ-CW-9md" firstAttribute="top" secondItem="RUd-ec-qem" secondAttribute="bottom" id="qgU-UF-StP"/>
+                            <constraint firstItem="BdY-7b-yQY" firstAttribute="centerX" secondItem="ex5-mo-btD" secondAttribute="centerX" id="vho-9h-KA0"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="目標設定" id="nU9-cN-5Jz"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="mokuhyoLabel" destination="BdY-7b-yQY" id="Zeh-sn-kO6"/>
                         <outlet property="okButton" destination="qAm-3A-RDN" id="py1-ea-FfE"/>
                         <outlet property="skView" destination="RUd-ec-qem" id="gt1-A5-m1e"/>
                         <outlet property="titleLabel" destination="Vbe-6u-xP3" id="ZCk-NE-6rt"/>
@@ -244,16 +247,25 @@
                                     <action selector="tappedOKButton:" destination="GfS-3y-BKk" eventType="touchUpInside" id="QUE-uC-oZi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標達成度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLe-ay-7I2">
-                                <rect key="frame" x="62" y="80" width="251" height="60"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="進捗どうですか？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLe-ay-7I2">
+                                <rect key="frame" x="50.5" y="80" width="274.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tyu-p8-9hw">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem id="wrT-dZ-fBZ"/>
+                                    <navigationItem id="wrT-dZ-fBZ">
+                                        <barButtonItem key="rightBarButtonItem" title="目標達成" style="done" id="fwu-cP-hwC">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="tappedAddButton:" destination="GfS-3y-BKk" id="Ddi-cs-hNC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -275,9 +287,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="目標振り返り" id="IM4-97-yZX"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="okButton" destination="nPB-hr-x4l" id="70B-Bp-bgc"/>
                         <outlet property="skView" destination="bA1-vr-1DA" id="8d6-OT-Qjh"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSetGoal" id="G1a-aS-Tjp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUO-z4-PRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -285,4 +299,7 @@
             <point key="canvasLocation" x="-823.20000000000005" y="285.60719640179911"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vGM-0h-Inp"/>
+    </inferredMetricsTieBreakers>
 </document>
